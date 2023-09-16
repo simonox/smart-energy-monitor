@@ -1,6 +1,6 @@
 # Energy Monitor
 
-Our energy monitor is based on the openenergymonitor.org project (Licence GNU GPL V3).
+Our energy monitor is based on the [openenergymonitor.org](https://openenergymonitor.org/) project (Licence GNU GPL V3).
 
 It uses our HelTec Wireless Stick. This - of course - can be replaced by a cheaper ESP32 module.
 
@@ -13,6 +13,10 @@ Power Measurement is done by a SCT013 clamp (100A:50mA).
 - [Bill of Material](../../hardware/BOM.md)
 
 ### PinOut
+
+We are using HelTec Automation Wirelsess Sticks ESP32 Dev-Boards.
+
+The PinOut of our version 3 modules can be found here: https://docs.heltec.org/en/node/esp32/dev-board/hardware_update_log.html#wifi-lora-32-hardware-update-logs
 
 ![PinOut](../images/HTIT-WS_V3.png "PinOut")
 
@@ -59,7 +63,23 @@ R3 is the burden resistor. Ideal burden would be 19 Ω. As this is not a common 
 
 See the Fritzing file for [details](./energy-monitor.fzz).
 
+## USB-C
+
+Our HelTec Automation Wirelsess Sticks ESP32 Dev-Boards already have USB-C. But they do not support Power Deliver (PD). If your computer tries to do PD, just plug a cheap USB hub between the board and your computer.
+
 ## Code
+
+### Arduino IDE
+
+HelTecs GitHub repo can be found here: https://github.com/HelTecAutomation/Heltec_ESP32
+
+I had to install VCP Drivers, first: https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads
+
+You can add their Board Manager to the boards managers URLs: https://github.com/HelTecAutomation/Heltec_ESP32/blob/master/library.json and find their libraries in the IDE (Sketch -> Include Library -> Manage Libraries... Search for "heltec esp32").
+
+> These boards are already _V3_ boards, so be careful selecting the right board and port (VCP).
+
+![Arduino IDE](../images/flash-with-arduino.png "select the right board and port")
 
 ### Print to serial out
 
@@ -108,6 +128,10 @@ To connect to your Wifi and access your MQTT server you have to add this to an `
 The `mqtt_server` in tis example posts to my local IP adress. The Wifi network is a `Guest` network I just created for this test.
 
 The `mqtt_prefix` should be different per device, as this is the topic prefix used to identify the device.
+
+We now can consume this messages in Node-RED, store them in InfluxDB and build a dashboard in Grafana.
+
+If you haven't deployed the [IoT prototyping backend yet, check out our guide](https://code.curious.bio/curious.bio/iot-backend/).
 
 ### Testing
 
