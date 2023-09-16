@@ -8,18 +8,13 @@ Copyright: (C) 2023 Curious Community Labs e. V.
 License: CERN-OHL-S-2.0
 
 Files:
-  .github
   .vscode
-  .dockerignore
   .editorconfig
   .envrc
   .gitignore
   flake.*
   nix/*
-  Dockerfile
-  pyproject.toml
   okh.toml
-  mkdocs.yml
   software/*
 Copyright: (C) 2023 Curious Community Labs e. V.
 License: GPL-3.0-or-later
