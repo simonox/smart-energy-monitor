@@ -24,7 +24,7 @@ The DIY Kit includes an [ESP microcontroller](https://www.espressif.com/en/produ
 
 ### Shelly Plus Plug S
 
-For users looking for a ready-made solution, we support the [Shelly Plus Plug S](https://kb.shelly.cloud/knowledge-base/shelly-plus-plug-s) or any other ESP based Power Plug with measurement functions. We use the device with the open-source firmware [Tasmota](https://tasmota.github.io/), making integration into your existing smart home systems a breeze. The following page gives an overview of the [devices supported by Tasmota](https://templates.blakadder.com/plug.html).
+For users looking for a ready-made solution, we support the [Shelly Plus Plug S](https://kb.shelly.cloud/knowledge-base/shelly-plus-plug-s) / [Shelly Plug] (https://kb.shelly.cloud/knowledge-base/shelly-plug) or any other ESP based Power Plug with measurement functions. We use the device with the open-source firmware [Tasmota](https://tasmota.github.io/), making integration into your existing smart home systems a breeze. The following page gives an overview of the [devices supported by Tasmota](https://templates.blakadder.com/plug.html).
 
 ## Safety Note
 
