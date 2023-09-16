@@ -115,7 +115,7 @@ from(bucket: "shelly")
 
 Using this query you can crate a dashboard in Grafana.
 
-![Grafana](.../images/grafana.png)
+![Grafana](../images/grafana.png)
 
 ## Links
 
