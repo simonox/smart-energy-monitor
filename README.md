@@ -1,5 +1,11 @@
 # Smart Energy Monitoring
 
+## Original Repo
+
+https://code.curious.bio/curious.bio/smart-energy-monitor.git
+
+## Intro 
+
 Smart Energy Monitoring is an open-source hardware project designed to empower individuals to monitor their energy consumption easily and efficiently. With the versatility of two different integrations - a DIY kit and a finished product - users can make informed decisions to manage and reduce their energy footprint.
 
 The project seamlessly integrates with the [IoT Prototyping Backend](https://code.curious.bio/curious.bio/iot-backend/) and serves as an exemplary application for the comprehensive integration of sensor systems, through the manipulation of data streams and visualization on a dashboard.
